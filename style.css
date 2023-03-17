@@ -65,10 +65,13 @@ h3, h4 {
     cursor: pointer;
     padding: 4px;
     border-radius: 6px;
+    border: 0;
+    transition: .5s;
 }
 
-.active {
-    border: 2px solid #009688;
+#preview_images img:hover , #preview_images img.active {
+    border: 2px solid #009688 !important;
+    transform: scale(1.09);
 }
 
 #add_to_cart_btn {
