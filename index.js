@@ -36,7 +36,6 @@ for (let i = 0; i < productData["photos"].length; i++) {
 
     temp_image_tag.id = "image_" + i;
     temp_image_tag.className = 'preview-images';
-    temp_image_tag.setAttribute("onclick", "update_main_image(this);");
     temp_image_tag.src = productData["photos"][i];
 
     if (i == 0) temp_image_tag.classList.add("active");
