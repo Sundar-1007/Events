@@ -37,9 +37,7 @@ for (let i = 0; i < productData["photos"].length; i++) {
     temp_image_tag.id = "image_" + i;
     temp_image_tag.className = 'preview-images';
     temp_image_tag.src = productData["photos"][i];
-
     if (i == 0) temp_image_tag.classList.add("active");
-
     document.getElementById("preview_images").appendChild(temp_image_tag);
 }
 
@@ -48,6 +46,10 @@ const smallImages = document.querySelectorAll('.preview-images');
 smallImages.forEach(smallImage => {
   smallImage.addEventListener('click', () => {
     const largeImageUrl = smallImage.src;
+    smallImages.forEach(image => {
+        image.classList.remove('active');
+      });
+    smallImage.setAttribute('class' , 'active');
     document.getElementById("main_image").setAttribute("src" , largeImageUrl);
     // Code to change the main section image
   });
